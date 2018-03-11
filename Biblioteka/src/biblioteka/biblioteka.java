@@ -27,7 +27,11 @@ public class biblioteka implements bibliotekaInterfejs {
 
 	
 	public LinkedList<Knjiga> pronadjiKnjigu(Autori autor, long ISBN, String naslov, String izdavac) {
-	return knjige;	
+		if (autor==null && ISBN==0 && naslov==null && izdavac==null)
+			System.out.println("Ne postoji takva knjiga");
+
+
+		return knjige;	
 		
 	}
 
