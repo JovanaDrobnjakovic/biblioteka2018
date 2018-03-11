@@ -27,7 +27,9 @@ public class biblioteka implements bibliotekaInterfejs {
 
 	
 	public LinkedList<Knjiga> pronadjiKnjigu(Autori autor, long ISBN, String naslov, String izdavac) {
-	return knjige;	
+		if (autor==null && ISBN==0 && naslov==null && izdavac==null)
+			throw new RuntimeException("Morate uneti bar neki kriterijum za pretragu");
+		return knjige;	
 		
 	}
 
